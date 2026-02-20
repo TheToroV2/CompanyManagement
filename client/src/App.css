@@ -1,0 +1,189 @@
+/* App Component Styles (red / black / white palette) */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--muted-100);
+  padding: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin: 0;
+}
+
+/* .app-logo removed - icon not used */
+
+.api-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: var(--muted-50);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.api-status.connected .status-dot {
+  background-color: #28a745;
+}
+
+.api-status.disconnected .status-dot {
+  background-color: #c33;
+  animation: none;
+}
+
+.api-status.checking .status-dot {
+  background-color: #ffa500;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app-footer {
+  background: var(--muted-50);
+  border-top: 1px solid var(--muted-100);
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.app-footer p {
+  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Success View */
+
+.success-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--muted-50);
+}
+
+.success-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.success-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin: 0 0 20px 0;
+}
+
+.company-summary {
+  background-color: var(--muted-50);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 20px 0 30px 0;
+  text-align: left;
+}
+
+.company-summary h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--muted-100);
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--muted-100);
+}
+
+.summary-item:last-child { border-bottom: none; }
+
+.summary-item .label { font-weight: 600; color: var(--muted); font-size: 13px; }
+.summary-item .value { color: var(--text-strong); font-size: 14px; word-break: break-word; }
+
+.status-active { display:inline-block; background-color: #f8f3f3; color: var(--primary); padding:4px 12px; border-radius:12px; font-weight:600; font-size:12px; }
+
+.success-message { font-size:14px; color: var(--muted); line-height:1.6; margin:20px 0; }
+
+.btn { padding:12px 24px; border:none; border-radius:6px; font-size:14px; font-weight:600; cursor:pointer; transition: all 0.3s ease; min-width:200px; }
+
+.btn-primary { background-color: var(--primary); color: var(--primary-contrast); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 18px var(--shadow-red); }
+
+@media (max-width: 600px) {
+  .header-content { flex-direction: column; gap:12px; text-align:center; }
+  .app-header h1 { font-size: 20px; }
+  .success-card { padding: 24px; }
+  .success-title { font-size: 24px; }
+  .success-icon { width:60px; height:60px; font-size:36px; }
+  .company-summary { font-size:13px; }
+  .summary-item { grid-template-columns: 1fr; gap:4px; }
+  .summary-item .label { font-size:12px; }
+  .btn { width:100%; }
+}

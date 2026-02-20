@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: companie-management
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production

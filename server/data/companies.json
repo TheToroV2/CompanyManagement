@@ -1,0 +1,46 @@
+[
+  {
+    "id": "company_1771561670722_w77t2ii2y",
+    "nit": "900674335",
+    "normalizedNIT": "900674335",
+    "name": "Seeded Company A",
+    "email": "a@example.com",
+    "phone": "3000000001",
+    "address": "Carrera 1 # 10 - 20",
+    "registeredAt": "2026-02-20T04:27:50.721Z",
+    "status": "active"
+  },
+  {
+    "id": "company_1771561670723_52rlqsbrt",
+    "nit": "900674336",
+    "normalizedNIT": "900674336",
+    "name": "Seeded Company B",
+    "email": "b@example.com",
+    "phone": "3000000002",
+    "address": "Carrera 2 # 20 - 30",
+    "registeredAt": "2026-02-20T04:27:50.721Z",
+    "status": "active"
+  },
+  {
+    "id": "company_1771561670724_5sqhwbwyk",
+    "nit": "811033098",
+    "normalizedNIT": "811033098",
+    "name": "Seeded Company C",
+    "email": "c@example.com",
+    "phone": "3000000003",
+    "address": "Calle 3 # 30 - 40",
+    "registeredAt": "2026-02-20T04:27:50.721Z",
+    "status": "active"
+  },
+  {
+    "id": "company_1771561980193_kb2ymlmsd",
+    "nit": "8110330980",
+    "normalizedNIT": "8110330980",
+    "name": "Prueba2",
+    "email": "assaas@sasasa.com",
+    "phone": "12212121",
+    "address": "Carrera 34 # 122 - 121",
+    "registeredAt": "2026-02-20T04:33:00.193Z",
+    "status": "active"
+  }
+]

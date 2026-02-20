@@ -1,0 +1,13 @@
+{
+  "name": "companie-management",
+  "private": true,
+  "description": "Company Management - React 18+ & Node.js",
+  "scripts": {
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm install && npm run build",
+    "start": "cd server && npm start",
+    "deploy:render": "npm run build && npm run start"
+  }
+}
