@@ -215,7 +215,7 @@ checkHealth()              // Check API health
 
 ##  Data Storage
 
-Currently uses **in-memory storage**. For production:
+Currently uses **Flat Files**. For production:
 
 - PostgreSQL
 - MongoDB
@@ -237,8 +237,8 @@ Outputs to `client/dist/`
 Runs directly with Node.js (no build needed)
 
 **Deployment**
-- Frontend: Vercel, Netlify, GitHub Pages
-- Backend: Heroku, Railway, AWS, Azure
+- Frontend: Render
+- Backend: Render
 - Set `NODE_ENV=production`
 - Use environment variables
 
@@ -280,18 +280,6 @@ Runs directly with Node.js (no build needed)
 - Check network connectivity
 - Inspect Network tab responses
 
-##  Future Enhancements
-
-- Database integration
-- User authentication
-- Email verification
-- External NIT validation (DIAN API)
-- Admin dashboard
-- Audit logs
-- File uploads
-- Advanced search
-- Pagination
-- Data export (CSV/PDF)
 
 ## Support
 
@@ -300,9 +288,6 @@ Runs directly with Node.js (no build needed)
 3. Verify dependencies installed
 4. Confirm both servers running
 
-##  License
-
-Private project - All rights reserved
 
 ##  Resources
 
