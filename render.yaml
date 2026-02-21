@@ -6,8 +6,8 @@ services:
     plan: free
     # Install server & client deps, then build the client
     buildCommand: npm install --prefix server && npm install --prefix client && npm run build --prefix client
-    # Use the server start script (lets server use process.env.PORT provided by Render)
-    startCommand: npm run start --prefix server
+    # Ensure server production deps are installed at start, then run the server
+    startCommand: npm ci --prefix server --production && npm run start --prefix server
     envVars:
       - key: NODE_ENV
         value: production
