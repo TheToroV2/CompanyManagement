@@ -1,11 +1,13 @@
 services:
   - type: web
     name: companie-management
-    env: node
+    runtime: node
     region: oregon
     plan: free
-    buildCommand: npm run build
-    startCommand: npm run start
+    # Install server & client deps, then build the client
+    buildCommand: npm install --prefix server && npm install --prefix client && npm run build --prefix client
+    # Use the server start script (lets server use process.env.PORT provided by Render)
+    startCommand: npm run start --prefix server
     envVars:
       - key: NODE_ENV
         value: production
