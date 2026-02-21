@@ -7,7 +7,7 @@
     "client": "cd client && npm run dev",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
     "build": "cd client && npm install && npm run build",
-    "start": "cd server && npm start",
+    "start": "npm ci --prefix server --production && npm --prefix server start",
     "deploy:render": "npm run build && npm run start"
   }
 }
